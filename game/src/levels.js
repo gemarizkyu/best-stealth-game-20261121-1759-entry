@@ -1,0 +1,100 @@
+// The three museum floors. Each level is plain data: stone walls that block sight and
+// movement, bushes to hide in, guard patrol routes, gold relics, the Moonstone pedestal,
+// the exit door and where the thief slips in. Waypoints never sit inside a wall.
+export const LEVELS = [
+  {
+    name: 'The Marble Hall',
+    hint: 'Steal the Moonstone, then slip out the green door. Bushes hide you.',
+    walls: [
+      { x: 560, y: 150, w: 160, h: 56 },
+      { x: 220, y: 400, w: 200, h: 48 },
+      { x: 860, y: 400, w: 200, h: 48 },
+      { x: 560, y: 560, w: 160, h: 48 },
+    ],
+    bushes: [
+      { x: 300, y: 180, r: 46 },
+      { x: 980, y: 180, r: 46 },
+      { x: 150, y: 600, r: 42 },
+      { x: 1130, y: 600, r: 42 },
+      { x: 640, y: 330, r: 40 },
+    ],
+    guards: [
+      { waypoints: [[320, 360], [640, 360], [960, 360]] },
+      { waypoints: [[900, 120], [900, 300], [380, 300], [380, 120]] },
+    ],
+    gems: [
+      { x: 180, y: 130 },
+      { x: 1100, y: 130 },
+      { x: 640, y: 640 },
+    ],
+    moonstone: { x: 640, y: 96 },
+    exit: { x: 1208, y: 316, w: 56, h: 88 },
+    playerStart: { x: 72, y: 360 },
+  },
+  {
+    name: 'The Gallery of Kings',
+    hint: 'Three guards now, and the patrols cross. Wait for the cone to turn away.',
+    walls: [
+      { x: 300, y: 130, w: 56, h: 220 },
+      { x: 924, y: 130, w: 56, h: 220 },
+      { x: 480, y: 480, w: 320, h: 52 },
+      { x: 180, y: 560, w: 220, h: 48 },
+      { x: 880, y: 560, w: 220, h: 48 },
+    ],
+    bushes: [
+      { x: 640, y: 120, r: 44 },
+      { x: 140, y: 300, r: 46 },
+      { x: 1140, y: 300, r: 46 },
+      { x: 640, y: 400, r: 42 },
+      { x: 300, y: 660, r: 40 },
+      { x: 980, y: 660, r: 40 },
+    ],
+    guards: [
+      { waypoints: [[200, 420], [640, 420], [1080, 420]] },
+      { waypoints: [[640, 180], [640, 380], [1080, 380], [1080, 180]] },
+      { waypoints: [[200, 180], [200, 380], [640, 380], [640, 180]] },
+    ],
+    gems: [
+      { x: 120, y: 120 },
+      { x: 1160, y: 120 },
+      { x: 640, y: 620 },
+    ],
+    moonstone: { x: 640, y: 72 },
+    exit: { x: 1208, y: 316, w: 56, h: 88 },
+    playerStart: { x: 72, y: 360 },
+  },
+  {
+    name: 'The Vault of the Moonstone',
+    hint: 'Four guards, tight patrols, one way out. Patience wins this floor.',
+    walls: [
+      { x: 400, y: 120, w: 480, h: 48 },
+      { x: 200, y: 300, w: 56, h: 220 },
+      { x: 1024, y: 300, w: 56, h: 220 },
+      { x: 400, y: 552, w: 480, h: 48 },
+      { x: 612, y: 300, w: 56, h: 120 },
+    ],
+    bushes: [
+      { x: 320, y: 120, r: 42 },
+      { x: 960, y: 120, r: 42 },
+      { x: 320, y: 620, r: 42 },
+      { x: 960, y: 620, r: 42 },
+      { x: 640, y: 240, r: 40 },
+      { x: 640, y: 480, r: 40 },
+    ],
+    guards: [
+      { waypoints: [[150, 220], [640, 220], [1130, 220]] },
+      { waypoints: [[150, 500], [640, 500], [1130, 500]] },
+      { waypoints: [[640, 90], [1130, 90], [1130, 630], [640, 630]] },
+      { waypoints: [[150, 630], [150, 90], [640, 90], [640, 630]] },
+    ],
+    gems: [
+      { x: 120, y: 90 },
+      { x: 1160, y: 90 },
+      { x: 1160, y: 630 },
+      { x: 120, y: 630 },
+    ],
+    moonstone: { x: 640, y: 360 },
+    exit: { x: 1208, y: 316, w: 56, h: 88 },
+    playerStart: { x: 72, y: 360 },
+  },
+];
